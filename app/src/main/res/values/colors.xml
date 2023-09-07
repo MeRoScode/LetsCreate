@@ -8,6 +8,6 @@
     <color name="darkGray">#9C9C9C</color>
     <color name="orange">#F4AB2A</color>
     <color name="red">#FF0303</color>
-    <color name="seconderyGreen">#E4FF6D</color>
-    <color name="yello">#F4FB2F</color>
+    <color name="secondaryGreen">#E4FF6D</color>
+    <color name="yellow">#F4FB2F</color>
 </resources>
