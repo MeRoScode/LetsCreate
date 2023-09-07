@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">LetsCreate</string>
+    <string name="home">خانه</string>
+    <string name="development">پیشرفت</string>
+    <string name="innovation">نوآوری</string>
+    <string name="habits">عادت\u200Cها</string>
+    <string name="calender">تقویم</string>
 </resources>
