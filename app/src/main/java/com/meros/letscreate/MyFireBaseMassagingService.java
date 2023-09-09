@@ -9,6 +9,8 @@ import androidx.core.app.NotificationCompat;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
+import java.util.Random;
+
 public class MyFireBaseMassagingService extends FirebaseMessagingService {
 
     @Override
@@ -24,6 +26,6 @@ public class MyFireBaseMassagingService extends FirebaseMessagingService {
                     "LetsCreate")
                     .setContentText(message.getNotification().getBody())
                     .setSmallIcon(android.R.drawable.sym_action_chat).build();
-            notificationManager.notify(1001, notification);
+            notificationManager.notify(new Random().nextInt(9999), notification);
     }
 }
