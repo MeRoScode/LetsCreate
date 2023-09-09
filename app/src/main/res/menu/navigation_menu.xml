@@ -2,11 +2,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/development"
-        android:icon="@drawable/home_icon"
+        android:icon="@drawable/progress_icon"
         android:title="@string/development" />
     <item
         android:id="@+id/calender"
-        android:icon="@drawable/home_icon"
+        android:icon="@drawable/calendar_icon"
         android:title="@string/calender" />
     <item
         android:id="@+id/home"
@@ -14,10 +14,10 @@
         android:title="@string/home" />
     <item
         android:id="@+id/habits"
-        android:icon="@drawable/home_icon"
+        android:icon="@drawable/habit_icon"
         android:title="@string/habits" />
     <item
         android:id="@+id/innovation"
-        android:icon="@drawable/home_icon"
+        android:icon="@drawable/lightbulb_icon"
         android:title="@string/innovation" />
 </menu>
