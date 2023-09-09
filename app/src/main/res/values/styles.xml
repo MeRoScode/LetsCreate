@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Base.Widget.mytheme.BottomNavigationView" parent="Widget.Material3.BottomNavigationView">
+
+        <item name="itemIconTint">@color/color_selector</item>
+        <item name="itemTextColor">@color/color_selector</item>
+        <item name="itemRippleColor">@color/m3_navigation_bar_ripple_color_selector</item>
+        <item name="android:background">?colorOnPrimary</item>
+        <item name="itemActiveIndicatorStyle">@style/myBottomNavigationStyle.itemActiveIndicatorStyle</item>
+        <item name="itemTextAppearanceActive">@style/myBottomNavigationStyle.itemTextAppearanceActive</item>
+
+    </style>
+
+    <style name="myBottomNavigationStyle.itemActiveIndicatorStyle" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+     <item name="android:color">?color</item>
+    </style>
+
+    <style name="myBottomNavigationStyle.itemTextAppearanceActive" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+     <item name="fontFamily">@font/iransansweb_bold</item>
+     <item name="android:fontFamily">@font/iransansweb_bold</item>
+    </style>
+
+</resources>
