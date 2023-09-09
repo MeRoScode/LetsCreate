@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Active item -->
+    <item android:color="?colorPrimary" android:state_checked="true" android:state_pressed="true" />
+    <item android:color="?colorPrimary" android:state_checked="true" android:state_focused="true" />
+    <item android:color="?colorPrimary" android:state_checked="true" android:state_hovered="true" />
+    <item android:color="?colorPrimary" android:state_checked="true" />
+
+    <!-- Inactive item -->
+    <item android:color="@macro/m3_comp_navigation_bar_inactive_pressed_icon_color" android:state_pressed="true" />
+    <item android:color="@macro/m3_comp_navigation_bar_inactive_focus_icon_color" android:state_focused="true" />
+    <item android:color="@macro/m3_comp_navigation_bar_inactive_hover_icon_color" android:state_hovered="true" />
+    <item android:color="#8B1D1E1D" />
+</selector>
