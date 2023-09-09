@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "732454655493",
+    "project_id": "letscreate-71865",
+    "storage_bucket": "letscreate-71865.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:732454655493:android:f80521a6d701121c2fee6c",
+        "android_client_info": {
+          "package_name": "com.meros.letscreate"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbSkbLGdSLOkokDk84I5huTLxnHKoUf-s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
