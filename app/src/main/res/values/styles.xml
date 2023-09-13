@@ -6,7 +6,7 @@
         <item name="itemIconTint">@color/color_selector</item>
         <item name="itemTextColor">@color/color_selector</item>
         <item name="itemRippleColor">@color/m3_navigation_bar_ripple_color_selector</item>
-        <item name="android:background">?colorOnPrimary</item>
+        <item name="android:background">@drawable/bottom_navigation_background</item>
         <item name="itemActiveIndicatorStyle">@style/myBottomNavigationStyle.itemActiveIndicatorStyle</item>
         <item name="itemTextAppearanceActive">@style/myBottomNavigationStyle.itemTextAppearanceActive</item>
 

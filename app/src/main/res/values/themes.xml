@@ -6,10 +6,10 @@
         <item name="colorOnPrimary">@color/white</item>
         <item name="colorSecondary">@color/blue</item>
         <item name="colorOnSecondary">@color/black</item>
-        <item name="android:statusBarColor">@color/lightGray</item>
+        <item name="android:statusBarColor">@color/originalBlack</item>
         <item name="colorOnError">@color/white</item>
         <item name="colorError">@color/red</item>
-        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
         <item name="fontFamily">@font/iransansweb</item>
         <item name="android:fontFamily">@font/iransansweb</item>
         <item name="colorSurface">@color/black</item>

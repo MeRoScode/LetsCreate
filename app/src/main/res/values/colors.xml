@@ -2,7 +2,7 @@
 <resources>
     <color name="black">#1D1E1D</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="green">#355C2A</color>
+    <color name="green">#83E668</color>
     <color name="blue">#4E8CF8</color>
     <color name="lightGray">#E8EDE6</color>
     <color name="darkGray">#9C9C9C</color>
@@ -11,4 +11,5 @@
     <color name="secondaryGreen">#E4FF6D</color>
     <color name="yellow">#F4FB2F</color>
     <color name="transparent">#00000000</color>
+    <color name="originalBlack">#000000</color>
 </resources>

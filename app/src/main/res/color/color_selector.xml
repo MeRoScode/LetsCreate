@@ -10,5 +10,5 @@
     <item android:color="@macro/m3_comp_navigation_bar_inactive_pressed_icon_color" android:state_pressed="true" />
     <item android:color="@macro/m3_comp_navigation_bar_inactive_focus_icon_color" android:state_focused="true" />
     <item android:color="@macro/m3_comp_navigation_bar_inactive_hover_icon_color" android:state_hovered="true" />
-    <item android:color="#8B1D1E1D" />
+    <item android:color="@color/black" />
 </selector>
