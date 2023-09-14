@@ -1,16 +1,21 @@
 package com.meros.letscreate;
 
+import static com.meros.letscreate.Constants.REQ_CODE_SPEECH_INPUT;
+
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.bumptech.glide.util.Util;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.meros.letscreate.Fragments.Calender.CalenderFragment;
@@ -80,4 +85,11 @@ public class MainActivity extends LetActivity implements NavigationView.OnNaviga
         }
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == REQ_CODE_SPEECH_INPUT && resultCode == RESULT_OK){
+            String res = Utils.handleListenResult(data);
+        }
+    }
 }

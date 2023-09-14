@@ -1,5 +1,6 @@
 package com.meros.letscreate;
 
+import static android.app.Activity.RESULT_OK;
 import static com.meros.letscreate.Constants.REQ_CODE_SPEECH_INPUT;
 import static com.meros.letscreate.Constants.textToSpeech;
 
@@ -18,6 +19,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 
+import java.util.ArrayList;
 import java.util.Locale;
 
 public class Utils {
@@ -75,7 +77,7 @@ public class Utils {
         }
     }
 
-    public static void speak(Context c,String text) {
+    public static void speak(Context c, String text) {
         if (textToSpeech == null) {
             textToSpeech = new TextToSpeech(c,
                     status -> {
@@ -84,10 +86,10 @@ public class Utils {
                         }
                     });
         }
-        textToSpeech.speak(text,TextToSpeech.QUEUE_FLUSH, null);
+        textToSpeech.speak(text, TextToSpeech.QUEUE_FLUSH, null);
     }
 
-    public static void listen(Activity activity,String question) {
+    public static void listen(Activity activity, String question) {
         Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.getDefault());
@@ -96,6 +98,16 @@ public class Utils {
             activity.startActivityForResult(intent, REQ_CODE_SPEECH_INPUT);
         } catch (ActivityNotFoundException a) {
         }
+    }
+
+
+    public static String handleListenResult(Intent data) {
+        String result = "";
+        if (data != null) {
+            ArrayList<String> resultList = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+            result = resultList.get(0);
+        }
+        return result;
     }
 
 }
