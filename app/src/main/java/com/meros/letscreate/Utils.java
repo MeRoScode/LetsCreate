@@ -1,6 +1,14 @@
 package com.meros.letscreate;
 
+import static com.meros.letscreate.Constants.REQ_CODE_SPEECH_INPUT;
+import static com.meros.letscreate.Constants.textToSpeech;
+
+import android.app.Activity;
+import android.content.ActivityNotFoundException;
 import android.content.Context;
+import android.content.Intent;
+import android.speech.RecognizerIntent;
+import android.speech.tts.TextToSpeech;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -9,6 +17,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
+
+import java.util.Locale;
 
 public class Utils {
 
@@ -62,6 +72,29 @@ public class Utils {
                     }
                 }
             }
+        }
+    }
+
+    public void speak(Context c,String text) {
+        if (textToSpeech == null) {
+            textToSpeech = new TextToSpeech(c,
+                    status -> {
+                        if (status != TextToSpeech.ERROR) {
+                            textToSpeech.setLanguage(Locale.US);
+                        }
+                    });
+        }
+        textToSpeech.speak(text,TextToSpeech.QUEUE_FLUSH, null);
+    }
+
+    public void listen(Activity activity,String question) {
+        Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.getDefault());
+        intent.putExtra(RecognizerIntent.EXTRA_PROMPT, question);
+        try {
+            activity.startActivityForResult(intent, REQ_CODE_SPEECH_INPUT);
+        } catch (ActivityNotFoundException a) {
         }
     }
 
