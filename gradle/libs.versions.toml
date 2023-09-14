@@ -7,6 +7,7 @@ espresso-core = "3.5.1"
 appcompat = "1.6.1"
 koin-android = "3.4.3"
 koin-java = "3.4.3"
+lottie = "6.1.0"
 material = "1.9.0"
 constraintlayout = "2.1.4"
 firebase-analytics-ktx = "21.3.0"
@@ -20,6 +21,7 @@ androidx-test-ext-junit = { group = "androidx.test.ext", name = "junit", version
 espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso-core" }
 appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin-android" }
+lottie = { module = "com.airbnb.android:lottie", version.ref = "lottie" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 firebase-analytics-ktx = { group = "com.google.firebase", name = "firebase-analytics-ktx", version.ref = "firebase-analytics-ktx" }
