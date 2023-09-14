@@ -51,6 +51,7 @@ dependencies {
     implementation(libs.koin.android)
     implementation(libs.volley)
     implementation(libs.glide)
+    implementation (libs.lottie)
 
 
 }
