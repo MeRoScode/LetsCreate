@@ -55,7 +55,7 @@
 
 <h1 align="center">An application for personal development and daily progress</h1>
 
-1. Plan your progress. Manage books, projects, lessons, etc. here. (progress section)
+1. Plan your progress. Manage books, projects, lessons, etc. here. (Development section)
 2. Write down your daily tasks and leave reminders for them. (calendar section)
 3. Follow phone screen time, language training, shopping list, etc. (home section)
 4. Manage a good habit and a bad habit at the same time, leave the bad habits and create good habits for yourself. (Habits section)
