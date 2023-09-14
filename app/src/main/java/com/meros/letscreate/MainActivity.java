@@ -19,8 +19,9 @@ import com.meros.letscreate.Fragments.Habits.HabitsFragment;
 import com.meros.letscreate.Fragments.Home.HomeFragment;
 import com.meros.letscreate.Fragments.Innovation.InnovationFragment;
 import com.meros.letscreate.databinding.ActivityMainBinding;
+import com.meros.letscreate.Utils.LetActivity;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, BottomNavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends LetActivity implements NavigationView.OnNavigationItemSelectedListener, BottomNavigationView.OnNavigationItemSelectedListener {
 
 
     ActivityMainBinding binding;
@@ -45,31 +46,35 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     public void changeBottomNavigationPosition(int id){
         if (id == R.id.home) {
+            getSupportFragmentManager().clearBackStack(null);
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
             transaction.replace(R.id.fragmentContainer,new HomeFragment());
-            transaction.addToBackStack("Home");
+            transaction.addToBackStack(null);
             transaction.commit();
             Log.i("dgdsg", "changeBottomNavigationPosition: Home");
         } else if (id == R.id.habits) {
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
             transaction.replace(R.id.fragmentContainer,new HabitsFragment());
             transaction.commit();
-
+            Log.i("dgdsg", "changeBottomNavigationPosition: habits");
         } else if (id == R.id.calender) {
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
             transaction.replace(R.id.fragmentContainer,new CalenderFragment());
             transaction.commit();
+            Log.i("dgdsg", "changeBottomNavigationPosition: calender");
 
         } else if (id == R.id.development) {
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
             transaction.replace(R.id.fragmentContainer,new DevelopmentFragment());
             transaction.commit();
+            Log.i("dgdsg", "changeBottomNavigationPosition: development");
 
 
         } else if (id == R.id.innovation) {
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
             transaction.replace(R.id.fragmentContainer,new InnovationFragment());
             transaction.commit();
+            Log.i("dgdsg", "changeBottomNavigationPosition: innovation");
 
 
         }
