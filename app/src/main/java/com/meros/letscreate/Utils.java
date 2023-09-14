@@ -75,7 +75,7 @@ public class Utils {
         }
     }
 
-    public void speak(Context c,String text) {
+    public static void speak(Context c,String text) {
         if (textToSpeech == null) {
             textToSpeech = new TextToSpeech(c,
                     status -> {
@@ -87,7 +87,7 @@ public class Utils {
         textToSpeech.speak(text,TextToSpeech.QUEUE_FLUSH, null);
     }
 
-    public void listen(Activity activity,String question) {
+    public static void listen(Activity activity,String question) {
         Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.getDefault());
