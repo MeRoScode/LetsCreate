@@ -30,6 +30,7 @@ public class MainActivity extends LetActivity implements NavigationView.OnNaviga
 
 
     ActivityMainBinding binding;
+    public static int openPageId = R.id.home;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +51,7 @@ public class MainActivity extends LetActivity implements NavigationView.OnNaviga
 
 
     public void changeBottomNavigationPosition(int id){
+        openPageId = id;
         if (id == R.id.home) {
             getSupportFragmentManager().clearBackStack(null);
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
@@ -91,5 +93,17 @@ public class MainActivity extends LetActivity implements NavigationView.OnNaviga
         if (requestCode == REQ_CODE_SPEECH_INPUT && resultCode == RESULT_OK){
             String res = Utils.handleListenResult(data);
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (openPageId == R.id.home){
+            finish();
+        }else{
+            openPageId = R.id.home;
+            binding.navigationBar.setSelectedItemId(openPageId);
+        }
+
+
     }
 }
