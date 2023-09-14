@@ -51,3 +51,35 @@
 <h3 align="left">زبان های استفاده شده:</h3>
 <h3 align="left">Languages used:</h3>
 <p align="left"><a href="https://developer.android.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/android/android-original-wordmark.svg" alt="android" width="40" height="40"/> </a><a href="https://firebase.google.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="firebase" width="40" height="40"/></a> <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a>  <a href="https://www.java.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"/>  </a> <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/></a> <a href="https://www.php.net" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg" alt="php" width="40" height="40"/>   </a>  <a href="https://postman.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="postman" width="40" height="40"/> </a> </p>
+
+
+<h1 align="center">An application for personal development and daily progress</h1>
+
+1. Plan your progress. Manage books, projects, lessons, etc. here. (progress section)
+2. Write down your daily tasks and leave reminders for them. (calendar section)
+3. Follow phone screen time, language training, shopping list, etc. (home section)
+4. Manage a good habit and a bad habit at the same time, leave the bad habits and create good habits for yourself. (Habits section)
+5. Write down your ideas and implement them. (Innovation section)
+
+<h3 align="center">And all parts will be performed in audio and text form.</h3>
+
+
+
+
+
+
+
+
+
+
+<h1 align="center">اپلیکیشنی برای توسعه فردی و پیشرفت روزانه</h1>
+
+۱.برای پیشرفت خود برنامه ریزی کنید کتاب ها، پروژه ها، درس ها و... همه و همه را در اینجا مدیریت کنید.(بخش پیشرفت)
+۲.کارهای روزانه خود را یادداشت کنید و برای آنها ریمایندر بگذارید.(بخش تقویم)
+۳.اسکرین تایم گوشی، آموزش زبان، لیست خرید و.. را همه دنبال کنید(بخش خانه)
+۴.یک عادت خوب و یک عادت بد را همزمان مدریت کرده وعادت های بد را ترک کنید و عادت های خوب برای خود به وجود بیاورید.(بخش عادت ها)
+۵.ایده های خود را یادداشت کنید و آن هارا به اجرا دراورید.(بخش نوآوری)
+
+<h3 align="center">و همه بخش ها به صورت صوتی و متنی اجرا خواهند شد.</h3>
+
+
