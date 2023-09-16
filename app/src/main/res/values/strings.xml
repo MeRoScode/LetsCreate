@@ -5,4 +5,9 @@
     <string name="innovation">Innovation</string>
     <string name="habits">Habits</string>
     <string name="calender">calender</string>
+    <string name="edtTitleHint">Tack Title</string>
+    <string name="cancel">cancel</string>
+    <string name="create">Create</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
 </resources>
