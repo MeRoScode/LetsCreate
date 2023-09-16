@@ -1,6 +1,5 @@
 package com.meros.letscreate;
 
-import static android.app.Activity.RESULT_OK;
 import static com.meros.letscreate.Constants.REQ_CODE_SPEECH_INPUT;
 import static com.meros.letscreate.Constants.textToSpeech;
 
@@ -37,6 +36,10 @@ public class Utils {
         public void setProgress(boolean mustShow) {
             setProgressbar((FrameLayout) getView(), getActivity(), mustShow);
         }
+        @Override
+        public ConstraintLayout showBackgroundView(boolean mustShow) {
+            return Utils.showBackgroundView((FrameLayout) getView(), getActivity(), mustShow);
+        }
     }
 
     public abstract static class LetActivity extends AppCompatActivity implements pageOnClicks {
@@ -49,13 +52,21 @@ public class Utils {
         public void setProgress(boolean mustShow) {
             setProgressbar((FrameLayout) getWindow().getDecorView().findViewById(android.R.id.content), getApplicationContext(), mustShow);
         }
+        @Override
+        public ConstraintLayout showBackgroundView(boolean mustShow) {
+            return Utils.showBackgroundView((FrameLayout) getWindow().getDecorView().findViewById(android.R.id.content), getApplicationContext(), mustShow);
+        }
 
     }
+
+
 
     public interface pageOnClicks {
         void Toast(Context c, String text);
 
         void setProgress(boolean mustShow);
+
+        ConstraintLayout showBackgroundView(boolean mustShow);
     }
 
     public static void setProgressbar(FrameLayout root, Context c, boolean mustShow) {
@@ -75,6 +86,26 @@ public class Utils {
                 }
             }
         }
+    }
+    public static ConstraintLayout showBackgroundView(FrameLayout root, Context c, boolean mustShow) {
+        ConstraintLayout backgroundView = null;
+        if (root != null) {
+            if (c != null) {
+                backgroundView = root.findViewById(R.id.progressView);
+                if (backgroundView == null && mustShow) {
+                    backgroundView = (ConstraintLayout) LayoutInflater.from(c).inflate(R.layout.dialog_background_view, root, false);
+                    root.addView(backgroundView);
+                }
+                if (backgroundView != null) {
+                    if (mustShow)
+                        backgroundView.setVisibility(View.VISIBLE);
+                    else {
+                        backgroundView.setVisibility(View.GONE);
+                    }
+                }
+            }
+        }
+        return backgroundView;
     }
 
     public static void speak(Context c, String text) {
