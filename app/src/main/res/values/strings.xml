@@ -10,4 +10,10 @@
     <string name="create">Create</string>
     <string name="title">Title</string>
     <string name="description">Description</string>
+    <string name="timer">Timer</string>
+    <string name="reminder">Reminder</string>
+    <string name="repeat">Repeat</string>
+    <string name="no">No</string>
+    <string name="done">Done</string>
+    <string name="edtDescriptionHint">Tack Description</string>
 </resources>
