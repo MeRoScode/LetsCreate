@@ -23,12 +23,17 @@ public class TackModel {
         values.put(TAG,tag);
         values.put(TITLE,title);
         values.put(DESCRIPTION,description);
-        values.put(IS_FINISHED,isFinished);
+        if (isFinished){
+            values.put(IS_FINISHED,1);
+        }else{
+            values.put(IS_FINISHED,0);
+        }
         return values;
     }
 
     private int id,cat_id,urgency;
     private String date,time,tag, title,description;
+    private boolean isFinished;
 
     public boolean isFinished() {
         return isFinished;
@@ -38,7 +43,6 @@ public class TackModel {
         isFinished = finished;
     }
 
-    private boolean isFinished;
 
     public int getId() {
         return id;
