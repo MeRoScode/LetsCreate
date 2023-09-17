@@ -48,6 +48,13 @@
                         android:textColor="@color/white"
                         android:textSize="15dp" />
 
+                    <ImageView
+                        android:id="@+id/timer"
+                        android:layout_width="25dp"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/timer_icon"/>
+
                     <androidx.appcompat.widget.AppCompatCheckBox
                         android:id="@+id/isFinished"
                         android:layout_width="wrap_content"
