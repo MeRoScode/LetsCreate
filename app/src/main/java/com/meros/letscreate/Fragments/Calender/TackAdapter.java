@@ -1,5 +1,6 @@
 package com.meros.letscreate.Fragments.Calender;
 
+import android.annotation.SuppressLint;
 import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,7 +18,7 @@ import java.util.ArrayList;
 public class TackAdapter extends RecyclerView.Adapter<TackAdapter.Viewholder> {
 
     ArrayList<TackModel> tacks;
-
+    private static int openPosition = -1;
     public TackAdapter(ArrayList<TackModel> tacks) {
         this.tacks = tacks;
     }
@@ -29,8 +30,32 @@ public class TackAdapter extends RecyclerView.Adapter<TackAdapter.Viewholder> {
     }
 
     @Override
-    public void onBindViewHolder(@NonNull TackAdapter.Viewholder holder, int position) {
+    public void onBindViewHolder(@NonNull TackAdapter.Viewholder holder, @SuppressLint("RecyclerView") int position) {
 //        holder.bind(tacks.get(position));
+
+
+        if (openPosition == position){
+            holder.tvDescription.setVisibility(View.VISIBLE);
+        }else {
+            holder.tvDescription.setVisibility(View.GONE);
+        }
+
+        holder.itemView.setOnClickListener((view -> {
+            if (openPosition == position){
+                openPosition = -1;
+                notifyItemChanged(position);
+            }else if (openPosition == -1){
+                openPosition = position;
+                notifyItemChanged(position);
+            }else{
+                int pos = openPosition;
+                openPosition = -1;
+                notifyItemChanged(pos);
+                openPosition = position;
+                notifyItemChanged(openPosition);
+            }
+        }));
+
     }
 
     @Override
